@@ -16,12 +16,12 @@ void    ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)()) {
     curr->next = node;
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-static void ft_print_str(void *data) {
-    printf("%s ", (char *)data);
-}
+// static void ft_print_str(void *data) {
+//     printf("%s ", (char *)data);
+// }
 
 // int main() {
 //     char    *ar[] = {"a", "a", "d", "c", "d", "b"};
