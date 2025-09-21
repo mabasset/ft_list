@@ -6,7 +6,7 @@ static void ft_remove(t_list *node, void (*free_fct)(void *)) {
     free(node);
 }
 
-void    ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (*free_fct)(void *)) {
+void    ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(void *, void *), void (*free_fct)(void *)) {
     t_list  *prev;
     t_list  *curr;
 

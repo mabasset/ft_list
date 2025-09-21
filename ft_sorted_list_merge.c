@@ -1,6 +1,6 @@
 #include "ft_list.h"
 
-static t_list   *ft_merge(t_list *list1, t_list *list2, int (*cmp)()) {
+static t_list   *ft_merge(t_list *list1, t_list *list2, int (*cmp)(void *, void *)) {
     t_list  *result;
 
     if (list1 == NULL)
@@ -18,7 +18,7 @@ static t_list   *ft_merge(t_list *list1, t_list *list2, int (*cmp)()) {
     return result;
 }
 
-void    ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cmp)()) {
+void    ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cmp)(void *, void *)) {
     *begin_list1 = ft_merge(*begin_list1, begin_list2, cmp);
 }
 

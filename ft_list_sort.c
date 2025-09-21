@@ -16,7 +16,7 @@ static t_list  *ft_split(t_list *begin_list) {
     return half;
 }
 
-static t_list   *ft_merge(t_list *list1, t_list *list2, int (*cmp)()) {
+static t_list   *ft_merge(t_list *list1, t_list *list2, int (*cmp)(void *, void *)) {
     t_list  *result;
 
     if (list1 == NULL)
@@ -34,7 +34,7 @@ static t_list   *ft_merge(t_list *list1, t_list *list2, int (*cmp)()) {
     return result;
 }
 
-void    ft_list_sort(t_list **begin_list, int (*cmp)()) {
+void    ft_list_sort(t_list **begin_list, int (*cmp)(void *, void *)) {
     t_list  *half;
 
     if (*begin_list == NULL || (*begin_list)->next == NULL)
