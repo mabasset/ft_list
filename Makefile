@@ -1,11 +1,8 @@
-NAME = ft_list.a
-CFLAGS = -Wall -Wextra -Werror
-
-SRCS = *.c
-
-OBJS = $(SRCS:.c=.o)
-
-HEADER = ft_list.h
+NAME := liblist.a
+CFLAGS := -Wall -Wextra -Werror
+SRCS := $(wildcard *.c)
+OBJS := $(SRCS:.c=.o)
+HEADER := ft_list.h
 
 all: $(NAME)
 
